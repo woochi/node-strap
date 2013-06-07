@@ -1,0 +1,31 @@
+//Inputs
+input-width =             rhythm(10)
+input-width-long =        rhythm(20)
+input-border-radius =     2px
+
+input-background =        gray-lighter
+input-background-focus =  input-background
+input-background-hover =  input-background
+
+input-background-disabled = input-background
+input-background-error =    input-background
+
+input
+  appearance: none
+  display: block
+  width: input-width
+  margin: 0
+  padding: rhythm(0.5)
+  background-color: input-background
+  border: none
+  border-radius: input-border-radius
+  outline: 0
+
+  &:invalid
+    background-color: input-background-error
+
+  &:disabled
+    background-color: input-background-disabled
+
+  &.long
+    width: input-width-long

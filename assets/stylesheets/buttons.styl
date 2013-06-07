@@ -1,0 +1,48 @@
+// Buttons
+btn-background =            orange
+btn-background-highlight =  darken(orange, 10%)
+btn-color =                 white
+btn-border-radius =         2px
+
+btn-disabled-background =   gray-light
+btn-disabled-color =        gray
+
+btn-primary-background =            btn-background
+btn-primary-background-highlight =  darken(btn-background, 10%)
+
+btn-alert-background =            red
+btn-alert-background-hihglight =  darken(btn-alert-background, 10%)
+
+// Normal button
+.button
+  appearance: none
+  display: inline-block
+  margin: 0
+  padding: rhythm(0.5) rhythm(1)
+  background-color: btn-background
+  color: btn-color
+  border: none
+  border-radius: btn-border-radius
+
+  &:hover
+    background-color: btn-background-highlight
+
+  &:disabled
+    background-color: btn-disabled-background
+    color: btn-disabled-color
+
+// Primary action button
+.primary-button
+  @extend .button
+  background-color: btn-primary-background
+
+  &:hover
+    background-color: btn-primary-background-highlight
+
+// Destructive action button
+.alert-button
+  @extend .button
+  background-color: btn-alert-background
+
+  &:hover
+    background-color: btn-alert-background-highlight
